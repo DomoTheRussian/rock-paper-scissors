@@ -2,7 +2,7 @@ const choices = ['rock', 'paper', 'scissors'];
 let humanPick;
 
 function getComputerChoice(choices) {
-    const randomPick = Math.floor(Math.random() * choices.length);
+    const randomPick = Math.floor(Math.random() * 3);
     const randomChoice = choices[randomPick];
     return randomChoice;
 }
@@ -10,9 +10,8 @@ function getComputerChoice(choices) {
 const result = getComputerChoice(choices);
 
 function getHumanChoice() {
-    humanPick = window.prompt("What is your choice: rock, paper or scissors?");
+    humanPick = window.prompt("What is your choice: rock, paper or scissors?").toLocaleLowerCase();
     return humanPick;
-    let humanPick = Text.toLowerCase()
 }
 
 getHumanChoice();
